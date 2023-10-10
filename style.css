@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu {
+    margin: 50px;
+
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    color: #914b4b;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: 8;
+}
+
+.menu ul li {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 15px;
+    padding: 10px 40px;
+    background: rgb(31, 31, 67);
+    transform: skewX(25deg);
+    border-right: 1px solid white;
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    transform: skewX(-25deg);
+    text-align: center;
+    color: white;
+    display: block;
+}
+
+.menu ul li:hover {
+    transition-delay: .1s;
+    background-color: red;
+}
+
+.menu ul li .dropdown {
+    content: '';
+    flex-direction: column;
+    color: blue;
+    visibility: hidden;
+    position: absolute;
+    top: 70%;
+    left: 0%;
+
+}
+
+.menu ul li>.dropdown li {
+    padding: 10px 70px;
+    position: relative;
+    transform: rotateX(30deg);
+}
+
+.menu ul li>.dropdown li a {
+    transform: skewX(-50deg);
+    display: block;
+}
+
+.menu ul li>.dropdown-2 {
+    position: absolute;
+    flex-direction: column;
+    left: 100%;
+
+    top: -25%;
+    visibility: hidden;
+
+}
+
+
+.menu ul li>.dropdown-2 li{
+    transform: rotateX(20deg);
+    
+}
+.menu ul li>.dropdown-2 li a{
+    transform: skewX(-50deg);
+}
+.menu ul li:hover .dropdown {
+    visibility: visible;
+    transition-delay: .1s;
+
+}
+
+.menu ul li:hover .dropdown li:hover {
+    transition-delay: .1s;
+    transform: rotateX(20deg);
+    transition-duration: 1s;
+    background-color: aquamarine;
+}
+.menu ul li>.dropdown li:hover .dropdown-2{
+visibility: visible;
+}
+/*
+.menu ul li .dropdown:nth-child(odd){
+    transform: skewX(50deg) ;
+   
+}*
+
+.menu ul li > .dropdown li:nth-child(1){
+    transform: skewX(-25deg);
+}
+.menu ul li > .dropdown li:nth-child(2){
+    transform: skewX(-25deg);
+}
+
+.menu ul li > .dropdown li:nth-child(3){
+    transform: skewX(-25deg);
+}
